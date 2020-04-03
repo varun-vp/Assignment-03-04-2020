@@ -1,0 +1,23 @@
+﻿
+
+
+<h1>Index</h1>
+<title>@ViewData["Title"]</title>
+@{
+    <table class="table-bordered col-md-3 " style="border-color:black;border-width:thick">
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Salary</td>
+        </tr>
+        
+        @foreach (var emp in @ViewBag.EmpData)
+        {
+            <tr>
+                <td>@emp.EId</td>
+                <td>@emp.EName</td>
+                <td>@emp.ESalary</td>
+            </tr>
+         }
+    </table>
+}
